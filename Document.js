@@ -76,9 +76,23 @@ Document.prototype.delName = model.delChild( 'name' );
 // population
 Document.prototype.setPopulation = model.set( 'population', null, null, true)
                                         .validate( valid.type('number') )
-                                        .validate( valid.population() );
+                                        .validate( valid.positive() );
 
 Document.prototype.getPopulation = model.get( 'population' );
+
+// popularity
+Document.prototype.setPopSr = model.set( 'popSr', null, null, true)
+                                        .validate( valid.type('number') )
+                                        .validate( valid.positive() );
+
+Document.prototype.getPopSr = model.get( 'popSr' );
+
+// photos
+Document.prototype.setPhotos = model.set( 'photos', null, null, true)
+                                        .validate( valid.type('number') )
+                                        .validate( valid.positive() );
+
+Document.prototype.getPhotos = model.get( 'photos' );
 
 // admin
 Document.prototype.setAdmin = function( prop, val ){
