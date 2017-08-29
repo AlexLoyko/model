@@ -4,7 +4,7 @@ var validate = require('./util/valid');
 var transform = require('./util/transform');
 var _ = require('lodash');
 
-const addressFields = ['name', 'number', 'street', 'zip'];
+const addressFields = ['name', 'number', 'street', 'zip', 'street1', 'street2'];
 
 const parentFields = [
   'continent',
